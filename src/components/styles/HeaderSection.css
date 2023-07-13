@@ -1,0 +1,29 @@
+.app__header.section {
+	height: 20rem;
+}
+
+.header__name,
+.header__lastname,
+.header__intro {
+	width: 100%;
+	text-align: center;
+	font-size: 2rem;
+	color: royalblue;
+}
+
+.header__name {
+	letter-spacing: .95rem;
+	padding-left: .95rem;
+}
+
+.header__lastname {
+	letter-spacing: 1.25rem;
+	padding-left: 1.25rem;
+}
+
+.header__intro {
+	font-size: 1rem;
+	font-family: 'Hero';
+	letter-spacing: .05rem;
+}
+
