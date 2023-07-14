@@ -4,17 +4,19 @@
 	height: 100%;
 	margin: 0 auto;
 	background-color: black;
-	font-size: 62.5%;
 }
 
 .app {
 	display: flex;
 	flex-flow: column nowrap;
 	margin: auto;
+	font-size: 62.5%;
+	gap: 1rem;
 }
 
 .section {
-	background-color: #eee;
 	display: grid;
 	place-content: center;
+	width: 100%;
+	/* padding: 0 1rem; */
 }

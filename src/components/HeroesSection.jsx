@@ -6,29 +6,30 @@ import EducationHero from "./Heroes/EducationHero";
 import ProjectsHero from "./Heroes/ProjectsHero";
 import SkillsHero from "./Heroes/SkillsHero";
 import TestimoniesHero from "./Heroes/TestimoniesHero";
+import './styles/HeroesSection.css'
 
 const HeroesSection = () => {
 	return (
-		<main className="heroes section">
-			<div className="heroes my-container">
-				<div className="card__my-container">
+		<section className="heroes section">
+			<div className="heroes container">
+				<div className="hero__div first">
 					<ProjectsHero />
 				</div>
-				<div className="card__my-container">
+				<div className="hero__div second">
 					<AboutMeHero />
 					<ContactHero />
 					<TestimoniesHero />
 				</div>
-				<div className="card__my-container">
-					<SkillsHero />
-				</div>
-				<div className="card__my-container">
-					<EducationHero />
+				<div className="hero__div third">
 					<CVHero />
 					<CertificatesHero />
 				</div>
+				<div className="hero__div fourth">
+					<SkillsHero />
+					<EducationHero />
+				</div>
 			</div>
-		</main>
+		</section>
 	)
 };
 

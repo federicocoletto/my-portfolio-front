@@ -27,3 +27,34 @@
 	letter-spacing: .05rem;
 }
 
+@media (max-width: 425px) {
+	.app__header.section {
+		height: 20rem;
+	}
+	
+	.header__name,
+	.header__lastname,
+	.header__intro {
+		width: 100%;
+		text-align: center;
+		font-size: 1.3rem;
+		color: royalblue;
+	}
+	
+	.header__name {
+		letter-spacing: .43rem;
+		padding-left: .43rem;
+	}
+	
+	.header__lastname {
+		letter-spacing: .6rem;
+		padding-left: .6rem;
+	}
+	
+	.header__intro {
+		font-size: .8rem;
+		font-family: 'Hero';
+		letter-spacing: .05rem;
+		padding: 0 .5rem;
+	}
+}
