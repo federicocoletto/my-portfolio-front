@@ -14,7 +14,9 @@ const AboutMeHero = () => {
             onMouseOut={() => setShowText(false)}
         >
             <div className="hero__content aboutme">
-                <div className="hero__top invisible">Contacto</div>
+                <div className="hero__top invisible">
+                    <h4 className="hero__text left">Sobre mí</h4>
+                </div>
                 <div className="hero__bottom">
                     <div></div>
                     <i className="hero__text right inverted">

@@ -17,8 +17,8 @@ const HeroesSection = () => {
 				</div>
 				<div className="hero__div second">
 					<AboutMeHero />
-					<ContactHero />
 					<TestimoniesHero />
+					<ContactHero />
 				</div>
 				<div className="hero__div third">
 					<CVHero />
