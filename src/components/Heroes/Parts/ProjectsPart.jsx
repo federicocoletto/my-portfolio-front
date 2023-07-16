@@ -7,11 +7,11 @@ const ProjectsPart = () => {
 	const projects = [
 		{
 			id: 1,
-			image: '/images/eCommerce-js.png',
+			image: '/public/images/eCommerce-js.png',
 			netlify: 'https://playful-frangipane-713d64.netlify.app/',
 			github: 'https://github.com/federicocoletto/eCommerce.git',
 			pname: 'eCommerce',
-			description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat fugiat harum et recusandae eum, modi error reprehenderit necessitatibus eos veniam iste voluptates voluptatibus quo molestiae dicta tempore corporis eveniet vero? Perferendis, aliquam eaque vel adipisci culpa consequatur. Voluptatibus voluptates, repellat quisquam tenetur atque id, unde, suscipit fugit eos debitis vel corporis. Possimus debitis commodi iure reprehenderit magni repudiandae aut inventore!',
+			description: 'El primer proyecto que consistió en diseñar toda una página web. En este proyecto plasmé lo que aprendí durante el curso de Fundamentos de Desarrollo Web.',
 		},
 		{
 			id: 2,
@@ -76,39 +76,48 @@ const ProjectsPart = () => {
 	return (
 		<section id="projects" className="part">
 			<div className="part__container">
-				<header className="part__container-header">
-					<h2 className="part__title">Mis proyectos</h2>
-					<h4 className="part__subtitle">Descubra los trabajos que me han enseñado lo que sé hasta ahora.</h4>
+				<header className="part__header">
+					<h2 className="part__header-title">Mis proyectos</h2>
+					<h3 className="part__header-subtitle">Descubra los trabajos que me han enseñado lo que sé hasta ahora.</h3>
 				</header>
-				<div className="part__container-body carousel">
-					{/* <div className="carousel__items" style={{ transform: `translateX(calc(-${projectPosition}00% / 7))` }}>
+				<div className="carousel">
+					<div className="carousel__items" style={{ transform: `translateX(calc(-${projectPosition}00% / 7))` }}>
 						{
 							projects.map(project => (
 								<div className="carousel__item" key={project.id}>
 									<div className="carousel__item-images">
-										<img className='carousel__img' src={project.image} alt="project-img" onMouseOver={() => setShowImg(!showImg)} />
-										<div className={`hover-img__my-container ${showImg ? 'show' : ''}`} onMouseOut={() => setShowImg(false)} >
-											<a href={project.netlify} target="_blank" rel="noreferrer" title="eCommerce-JS">
-												<img className="carousel__img-hover" src={project.image} alt="" />
-											</a>
-										</div>
+										<img className="item__image" src={project.image} alt="project-img" onMouseOver={() => setShowImg(!showImg)} />
+										<a
+											className={`carousel__image-hover ${showImg ? 'show' : ''}`}
+											onMouseOut={() => setShowImg(false)}
+											href={project.netlify} target="_blank" rel="noopener noreferrer" title="eCommerce-JS"
+										>
+											<img src={project.image} alt="" className="item__image-hover" />
+										</a>
 									</div>
-									<div className="carousel__item-buttons">
-										<a className="carousel__a" href={project.netlify} target="_blank" rel="noreferrer" title={project.pname}><button>Netlify</button></a>
-										<a className="carousel__a" href={project.github} target="_blank" rel="noreferrer" title={project.pname}><button>GitHub</button></a>
+									<div className="carousel__item-info">
+										<h4 className="item__title">{project.pname}</h4>
+										<p className="item__description">{project.description}</p>
 									</div>
-									<footer className="carousel__item-info">
-										<h1 className="item-info__h1">{project.pname}</h1>
-										<p className="item-info__text">{project.description}</p>
-									</footer>
 								</div>
 							))
 						}
-					</div> */}
-					{/* <footer className="carousel__buttons">
-						{projectPosition !== 0 && (<button className="carousel__btn prev" onClick={handlePrev}>prev</button>)}
-						{projectPosition !== (projects.length - 1) && (<button className="carousel__btn next" onClick={handleNext}>next</button>)}
-					</footer> */}
+					</div>
+					<footer className="carousel__footer">
+						<div className="carousel__button">
+							<button className={`button previous ${projectPosition === 0 && 'hide'}`}  onClick={handlePrev}>prev</button>
+						</div>
+						<div className={`carousel__dot ${projectPosition === 0 ? 'active' : ''}`}></div>
+						<div className={`carousel__dot ${projectPosition === 1 ? 'active' : ''}`}></div>
+						<div className={`carousel__dot ${projectPosition === 2 ? 'active' : ''}`}></div>
+						<div className={`carousel__dot ${projectPosition === 3 ? 'active' : ''}`}></div>
+						<div className={`carousel__dot ${projectPosition === 4 ? 'active' : ''}`}></div>
+						<div className={`carousel__dot ${projectPosition === 5 ? 'active' : ''}`}></div>
+						<div className={`carousel__dot ${projectPosition === 6 ? 'active' : ''}`}></div>
+						<div className="carousel__button">
+							<button className={`button next ${projectPosition === 6 && 'hide'}`}  onClick={handleNext}>next</button>
+						</div>
+					</footer>
 				</div>
 			</div>
 		</section>
