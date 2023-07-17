@@ -18,6 +18,10 @@
 	row-gap: .45rem;
 }
 
+.hero__div.second {
+	grid-template-rows: 8rem 14rem;
+}
+
 .hero {
 	position: relative;
 	border-radius: 50px;
@@ -125,10 +129,10 @@
 }
 
 @media (max-width: 640px) {
-		.invisible {
-			visibility: hidden;
-		}
-	
+	.invisible {
+		visibility: hidden;
+	}
+
 }
 
 @media (min-width: 640px) {
@@ -151,7 +155,7 @@
 	.hero__div.fourth {
 		grid-template-rows: 7rem 11rem;
 	}
-	
+
 	.hero__div.third {
 		grid-template-rows: 18fr;
 		grid-template-columns: .3fr .7fr;
@@ -225,9 +229,11 @@
 	transform: rotate(-90deg);
 	top: 2.5rem; */
 }
+
 .hero__bottom {
 	align-items: end;
 }
+
 .download__span {
 	font-size: .3rem;
 	display: block;

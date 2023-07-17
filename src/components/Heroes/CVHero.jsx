@@ -7,7 +7,7 @@ const CVHero = () => {
                 onMouseOver={() => setShowText(true)}
                 onMouseOut={() => setShowText(false)}
             >
-                <div className="hero__top invisible">
+                <div className="hero__top">
                     <h4 className="hero__text left">CV</h4>
                 </div>
                 <div className="hero__bottom">
