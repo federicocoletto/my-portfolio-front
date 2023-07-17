@@ -1,5 +1,5 @@
 import { useState } from "react";
-// import './styles/ProjectsSection.css'
+import '../styles/Parts/ProjectsPart.css'
 const ProjectsPart = () => {
 	const [showImg, setShowImg] = useState(false)
 	const [projectPosition, setProjectPosition] = useState(0)
@@ -75,10 +75,10 @@ const ProjectsPart = () => {
 	}
 	return (
 		<section id="projects" className="part">
-			<div className="part__container">
+			<div className="part__container projects">
 				<header className="part__header">
-					<h2 className="part__header-title">Mis proyectos</h2>
-					<h3 className="part__header-subtitle">Descubra los trabajos que me han enseñado lo que sé hasta ahora.</h3>
+					<h2 className="part__title">Mis proyectos</h2>
+					<h3 className="part__subtitle">Descubra los trabajos que me han enseñado lo que sé hasta ahora.</h3>
 				</header>
 				<div className="carousel">
 					<div className="carousel__items" style={{ transform: `translateX(calc(-${projectPosition}00% / 7))` }}>
@@ -97,7 +97,7 @@ const ProjectsPart = () => {
 									</div>
 									<div className="carousel__item-info">
 										<h4 className="item__title">{project.pname}</h4>
-										<p className="item__description">{project.description}</p>
+										<p className="item__description part__text">{project.description}</p>
 									</div>
 								</div>
 							))
@@ -107,13 +107,13 @@ const ProjectsPart = () => {
 						<div className="carousel__button">
 							<button className={`button previous ${projectPosition === 0 && 'hide'}`}  onClick={handlePrev}>prev</button>
 						</div>
-						<div className={`carousel__dot ${projectPosition === 0 ? 'active' : ''}`}></div>
-						<div className={`carousel__dot ${projectPosition === 1 ? 'active' : ''}`}></div>
-						<div className={`carousel__dot ${projectPosition === 2 ? 'active' : ''}`}></div>
-						<div className={`carousel__dot ${projectPosition === 3 ? 'active' : ''}`}></div>
-						<div className={`carousel__dot ${projectPosition === 4 ? 'active' : ''}`}></div>
-						<div className={`carousel__dot ${projectPosition === 5 ? 'active' : ''}`}></div>
-						<div className={`carousel__dot ${projectPosition === 6 ? 'active' : ''}`}></div>
+						<div className={`carousel__dot ${projectPosition === 0 ? 'active' : ''}`} onClick={() => setProjectPosition(0)}></div>
+						<div className={`carousel__dot ${projectPosition === 1 ? 'active' : ''}`} onClick={() => setProjectPosition(1)}></div>
+						<div className={`carousel__dot ${projectPosition === 2 ? 'active' : ''}`} onClick={() => setProjectPosition(2)}></div>
+						<div className={`carousel__dot ${projectPosition === 3 ? 'active' : ''}`} onClick={() => setProjectPosition(3)}></div>
+						<div className={`carousel__dot ${projectPosition === 4 ? 'active' : ''}`} onClick={() => setProjectPosition(4)}></div>
+						<div className={`carousel__dot ${projectPosition === 5 ? 'active' : ''}`} onClick={() => setProjectPosition(5)}></div>
+						<div className={`carousel__dot ${projectPosition === 6 ? 'active' : ''}`} onClick={() => setProjectPosition(6)}></div>
 						<div className="carousel__button">
 							<button className={`button next ${projectPosition === 6 && 'hide'}`}  onClick={handleNext}>next</button>
 						</div>

@@ -3,13 +3,17 @@ import { useState } from "react"
 const TestimoniesHero = () => {
     const [showText, setShowText] = useState(false)
 
+    const handleClickScroll = () => {
+        document.getElementById("testimonies")?.scrollIntoView({ behavior: "smooth" });
+    };
+
     return (
         <div
             className="hero testimonies"
             onMouseOver={() => setShowText(true)}
-            onMouseOut={() => setShowText(false)}>
+            onMouseOut={() => setShowText(false)}
+            onClick={handleClickScroll}>
             <div className="hero__content">
-
                 <div className="hero__top">
                     <h4 className="hero__text left">Testimonios</h4>
                 </div>

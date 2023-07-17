@@ -1,8 +1,9 @@
 import './App.css'
 import HeaderSection from './components/HeaderSection'
-import AboutmePart from './components/Heroes/Parts/AboutmePart'
-import ProjectsPart from './components/Heroes/Parts/ProjectsPart'
 import HeroesSection from './components/HeroesSection'
+import AboutmePart from './components/Parts/AboutmePart'
+import ProjectsPart from './components/Parts/ProjectsPart'
+import Testimonies from './components/Parts/Testimonies'
 
 function App() {
 	return (
@@ -11,7 +12,8 @@ function App() {
 			<HeroesSection />
 			{/* Parts */}
 			<ProjectsPart />
-			{/* <AboutmePart /> */}
+			<AboutmePart />
+			<Testimonies />
 		</div>
 	)
 }

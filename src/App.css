@@ -34,188 +34,56 @@
 	width: 100%;
 }
 
-/* * PARTS */
-.part {
-	background-color: transparent;
-	/*
-	width: 100%;
-	display: grid;
-	place-content: center; 
-	*/
-}
-
+/* PARTS */
 .part__container {
-	background-color: transparent;
+	min-height: 95vh;
 	display: flex;
 	flex-direction: column;
-	position: relative;
-	
-	padding: 1em 1.7em;
-	background-color: gray;
-	border-radius: 1rem;
-	/*
-	overflow: hidden;
-	height: 100vh;
-	grid-template-rows: 10% 70% 20%;
-	column-gap: 1rem;
-	*/
-}
-
-.carousel {
-	background-color: transparent;
-	overflow: hidden;
-	/* z-index: 0; */
-	position: relative;
-	z-index: 0;
-	/*
-	*/
-}
-
-.carousel__items {
-	width: 700%;
-	display: flex;
-	justify-content: flex-start;
-	transition: transform .5s ease-out;
-	position: relative;
-	/*
-	height: 100%;
-	*/
-}
-
-.carousel__item {
-	width: calc(100% / 7);
-	display: grid;
-	row-gap: 1.5em;
-	/*
-	margin: 0 auto;
-	*/
-}
-
-.carousel__item-images {
-	width: 100%;
-	height: 15rem;
-	position: relative;
-	padding-bottom: 56.25%;
-	/* background-color: red; */
-	
-	/*
-	background-color: aliceblue;
-	position: absolute;
-	top: -5em;
-	left: 50%;
-	transform: translateX(-50%);
-	transition: opacity .3s;
-	opacity: 0;
-	visibility: hidden;
-	border-radius: 1rem;
-	*/
-}
-
-.item__image {
-	width: 85%;
-	height: 85%;
-	position: absolute;
-	top: calc(50% - 3rem);
-	left: calc(50% - 3rem);
-	transform: translate(-50%, -50%);
-	object-fit: cover;
-	object-position: top;
-	margin: 3rem;
-	border-radius: .5rem;
-	/*
-	border-radius: .5rem;
-	box-shadow: -1px 1px 15px 1px #0009;
-	*/
-}
-
-.carousel__image-hover {
-	width: calc(100%);
-	height: 100%;
-	overflow-y: scroll;
-	position: absolute;
-	top: .5rem;
-	left: 50%;
-	transform: translateX(-50%);
-	cursor: pointer;
-	transition: opacity .3s;
-	opacity: 0;
-	visibility: hidden;
-	/*
-	*/
-}
-
-.carousel__image-hover.show {
-	opacity: 1;
-	visibility: visible;
-	/*
-	*/
-}
-
-.carousel__image-hover::-webkit-scrollbar {
-	width: 1rem;
-}
-
-.carousel__image-hover::-webkit-scrollbar-thumb {
-	background-color: red;
-	border-radius: 4px;
-}
-
-.carousel__image-hover::-webkit-scrollbar-track {
-	background-color: rgb(223, 155, 155);
-}
-
-
-.item__image-hover {
-	width: 100%;
-}
-
-.carousel__item-info {
-	background-color: blue;
-	min-height: 13rem;
-	margin-bottom: 1rem;
-	/*
-	margin-top: -3rem;
-	*/
-}
-
-.carousel__footer {
-	background-color: aqua;
-	width: 100%;
-	display: flex;
 	justify-content: space-between;
-	align-items: center;
-	/*
-	*/
-}
-
-
-.carousel__button > button {
-	width: 3rem;
-	/*
-	*/
-}
-
-.carousel__button > button.hide {
 	position: relative;
-	visibility: hidden;
-}
-
-.carousel__dot {
-	width: 10px;
-	height: 10px;
-	border-radius: 50%;
-	outline: 2px solid black;
-	position: relative;
+	padding: 1em 1.7em;
+	border-radius: 1rem;
 	/*
 	*/
 }
 
-.carousel__dot.active::after {
-	content: '';
-	width: 100%;
-	height: 100%;
-	border-radius: 50%;
-	position: absolute;
-	left: 0;
-	background-color: white;
+.part__title {
+	font-size: 1.3rem;
+	margin-bottom: .5rem;
+}
+
+.part__text {
+	font-family: 'Poppins', sans-serif;
+	font-size: .85rem;
+	font-weight: 300;
+	margin: .4rem 0;
+}
+
+.part__container.projects {
+	background-color: green;
+	min-height: 0;
+}
+
+.part__container.aboutme {
+	background-color: blue;
+}
+
+.part__container.testimonies {
+	background-color: violet;
+}
+
+.part__container.skills {
+	background-color: olive;
+}
+
+.part__container.education {
+	background-color: seagreen;
+}
+
+.part__container.cv {
+	background-color: darkorange;
+}
+
+.part__container.certificates {
+	background-color: darkred;
 }

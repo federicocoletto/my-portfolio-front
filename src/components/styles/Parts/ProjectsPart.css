@@ -1,0 +1,167 @@
+.carousel {
+	background-color: transparent;
+	overflow: hidden;
+	position: relative;
+	z-index: 0;
+	/*
+	*/
+}
+
+.carousel__items {
+	width: 700%;
+	display: flex;
+	justify-content: flex-start;
+	transition: transform .5s ease-out;
+	position: relative;
+	/*
+	height: 100%;
+	*/
+}
+
+.carousel__item {
+	width: calc(100% / 7);
+	display: grid;
+	row-gap: 1.5em;
+	/*
+	margin: 0 auto;
+	*/
+}
+
+.carousel__item-images {
+	width: 100%;
+	margin: auto;
+	position: relative;
+	padding-bottom: 56.25%;
+	/* background-color: red; */
+	
+	/*
+	background-color: aliceblue;
+	position: absolute;
+	top: -5em;
+	left: 50%;
+	transform: translateX(-50%);
+	transition: opacity .3s;
+	opacity: 0;
+	visibility: hidden;
+	border-radius: 1rem;
+	*/
+}
+
+.item__image {
+	width: 85%;
+	height: 85%;
+	max-width: 768px;
+	max-height: 476px;
+	position: absolute;
+	top: calc(50% - 3rem);
+	left: calc(50% - 3rem);
+	transform: translate(-50%, -50%);
+	object-fit: cover;
+	object-position: top;
+	margin: 3rem;
+	border-radius: .5rem;
+	/*
+	border-radius: .5rem;
+	box-shadow: -1px 1px 15px 1px #0009;
+	*/
+}
+
+.carousel__image-hover {
+	width: 100%;
+	height: 100%;
+	max-width: calc(768px + 3rem);
+	overflow-y: scroll;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, .5rem);
+	cursor: pointer;
+	transition: opacity .3s;
+	opacity: 0;
+	visibility: hidden;
+	/*
+	*/
+}
+
+@media (min-width: 768px) {
+	/* .carousel__image-hover {
+		top: 0;
+	} */
+}
+
+.carousel__image-hover.show {
+	opacity: 1;
+	visibility: visible;
+	/*
+	*/
+}
+
+.carousel__image-hover::-webkit-scrollbar {
+	width: 1rem;
+}
+
+.carousel__image-hover::-webkit-scrollbar-thumb {
+	background-color: red;
+	border-radius: 4px;
+}
+
+.carousel__image-hover::-webkit-scrollbar-track {
+	background-color: rgb(223, 155, 155);
+}
+
+
+.item__image-hover {
+	width: 100%;
+}
+
+.carousel__item-info {
+	background-color: gray;
+	height: 13rem;
+	margin-bottom: 1rem;
+	/*
+	margin-top: -3rem;
+	*/
+}
+
+@media (min-width: 768px) {
+	.carousel__item-info {
+		height: 9rem;
+	}
+
+}
+
+.carousel__footer {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	/*
+	*/
+}
+
+
+.carousel__button > button {
+	width: 3rem;
+	/*
+	*/
+}
+
+.carousel__button > button.hide {
+	position: relative;
+	visibility: hidden;
+}
+
+.carousel__dot {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	outline: 2px solid black;
+	cursor: pointer;
+	background: transparent;
+	/*
+	*/
+}
+
+.carousel__dot.active {
+	background: white;
+	transition: background .3s;	
+}
