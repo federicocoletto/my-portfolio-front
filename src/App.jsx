@@ -2,8 +2,9 @@ import './App.css'
 import HeaderSection from './components/HeaderSection'
 import HeroesSection from './components/HeroesSection'
 import AboutmePart from './components/Parts/AboutmePart'
+import ContactMePart from './components/Parts/ContactMePart'
 import ProjectsPart from './components/Parts/ProjectsPart'
-import Testimonies from './components/Parts/Testimonies'
+import TestimoniesPart from './components/Parts/TestimoniesPart'
 
 function App() {
 	return (
@@ -13,7 +14,8 @@ function App() {
 			{/* Parts */}
 			<ProjectsPart />
 			<AboutmePart />
-			<Testimonies />
+			<TestimoniesPart />
+			<ContactMePart />
 		</div>
 	)
 }

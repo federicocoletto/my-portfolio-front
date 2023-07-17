@@ -4,7 +4,8 @@
 	height: 100%;
 	margin: 0 auto;
 	background-color: black;
-	padding: 1rem;
+	padding-bottom: 1rem;
+	/* padding: 1rem; */
 }
 
 .app {
@@ -35,6 +36,10 @@
 }
 
 /* PARTS */
+.part {
+	margin: 0 1rem;
+}
+
 .part__container {
 	min-height: 95vh;
 	display: flex;
@@ -70,6 +75,10 @@
 
 .part__container.testimonies {
 	background-color: violet;
+}
+
+.part__container.contactme {
+	background-color: tomato;
 }
 
 .part__container.skills {

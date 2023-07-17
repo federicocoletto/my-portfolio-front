@@ -1,0 +1,62 @@
+.part__container.contactme {
+	display: grid;
+	grid-template-columns: 1fr;
+	min-height: 10rem;
+}
+
+.socials {
+	height: 100%;
+	display: grid;
+	gap: 1rem;
+	place-items: center;
+}
+@media (min-width: 425px) {
+	.socials {
+		grid-template-columns: .5fr .5fr;
+	}
+}
+@media (min-width: 768px) {
+	.socials {
+		grid-template-columns: .25fr .25fr .25fr .25fr;
+	}
+}
+.social {
+	width: 100%;
+}
+
+.contact__a {
+	width: fit-content;
+	padding: .3rem .5rem;
+	display: flex;
+	gap: .5rem;
+	align-items: center;
+	margin: auto;
+	border-radius: 1rem;
+	border: none;
+	background-color: #0009;
+	letter-spacing: 1px;
+	font-family: 'Agenor Neue', sans-serif;
+	position: relative;
+	cursor: pointer;
+	transition: padding .3s;
+}
+
+.contact__a:hover {
+	padding-right: 2rem;
+}
+
+.contact__a i {
+	font-size: 1.1rem;
+	position: absolute;
+	right: 100%;
+	opacity: 0;
+	z-index: 0;
+	transition: right .4s ease-in-out, opacity .2s;
+}
+
+
+.contact__a i.show {
+	transition: opacity .4s;
+	opacity: 1;
+	right: .6rem;
+}

@@ -3,14 +3,18 @@ import { useState } from "react"
 const ContactHero = () => {
 
     const [showText, setShowText] = useState(false)
+    const handleScroll = () => {
+        document.getElementById('contactMe').scrollIntoView({behavior: "smooth"})
+    }
 
     return (
         <div
             className="hero contact"
             onMouseOver={() => setShowText(true)}
-            onMouseOut={() => setShowText(false)} >
+            onMouseOut={() => setShowText(false)}
+            onClick={handleScroll} >
             <div className="hero__content">
-                <div className="hero__top invisible">Contácteme</div>
+                <div className="hero__top">Contácteme</div>
                 <div className="hero__bottom">
                     <div></div>
                     <i className="hero__text right">

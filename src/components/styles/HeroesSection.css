@@ -1,17 +1,18 @@
 .heroes.section {
 	place-content: unset;
+	padding: 1rem;
+	width: 100%;
 }
 
 .heroes.container {
-	width: 100%;
-	margin: 0 auto;
+	margin: 0 auto -1rem;
 	display: grid;
 	gap: .45rem;
 }
 
 .hero__div {
 	display: grid;
-	grid-template-columns: calc(50% - .5rem);
+	grid-template-columns: .5fr;
 	grid-template-rows: 8rem 8rem;
 	column-gap: .5rem;
 	row-gap: .45rem;
@@ -106,7 +107,7 @@
 
 @media (max-width: 425px) {
 	.hero__div {
-		grid-template-columns: 30% 68%;
+		grid-template-columns: .3fr .7fr;
 	}
 
 	.hero__div.fourth {
@@ -114,16 +115,8 @@
 	}
 
 	.hero__div.third {
-		grid-template-columns: 68% 30%;
 		grid-template-rows: 8rem 4rem;
-	}
-
-	.hero__div.third {
-		grid-template-columns: 30% calc(70% - .5rem);
-	}
-
-	.invisible {
-		visibility: hidden;
+		grid-template-columns: .3fr .7fr;
 	}
 
 	.hero__text {
@@ -131,29 +124,51 @@
 	}
 }
 
+@media (max-width: 640px) {
+		.invisible {
+			visibility: hidden;
+		}
+	
+}
+
+@media (min-width: 640px) {
+	.container {
+		min-width: 100%;
+		max-width: none;
+	}
+}
+
 @media (min-width: 768px) {
+	.container {
+		max-width: none;
+		min-width: 100%;
+	}
+
 	.hero__center-text.faster {
 		visibility: hidden;
 	}
 
 	.hero__div.fourth {
-		grid-template-rows: 6rem 10rem;
+		grid-template-rows: 7rem 11rem;
+	}
+	
+	.hero__div.third {
+		grid-template-rows: 18fr;
+		grid-template-columns: .3fr .7fr;
 	}
 
-	.hero__div.third {
-		grid-template-columns: calc(70% - .5rem) 30%;
-	}
 	.hero__div.second {
-		grid-template-columns: 40% calc(60% - .5rem);
+		grid-template-columns: .3fr .7fr;
 	}
 }
 
 @media (min-width: 1024px) {
 	.heroes.container {
-		grid-template-columns: 50% 50%;
+		grid-template-columns: .5fr .5fr;
 	}
+
 	.hero__div.second {
-		grid-template-columns: 40% calc(60% - .5rem);
+		grid-template-columns: .4fr .6fr;
 	}
 }
 
@@ -209,4 +224,22 @@
 	/*
 	transform: rotate(-90deg);
 	top: 2.5rem; */
+}
+.hero__bottom {
+	align-items: end;
+}
+.download__span {
+	font-size: .3rem;
+	display: block;
+	opacity: 0;
+	transition: opacity .3s;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.download__span.show {
+	opacity: 1;
+
 }

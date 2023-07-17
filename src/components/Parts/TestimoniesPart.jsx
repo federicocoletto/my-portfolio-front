@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import '../styles/Parts/TestimoniesPart.css'
 
-const Testimonies = () => {
+const TestimoniesPart = () => {
 	const { handleSubmit, register, reset } = useForm();
 	const [testimonies, setTestimonies] = useState([]);
 
@@ -56,4 +56,4 @@ const Testimonies = () => {
 	)
 };
 
-export default Testimonies;
+export default TestimoniesPart;

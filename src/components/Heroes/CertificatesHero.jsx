@@ -7,7 +7,7 @@ const CertificatesHero = () => {
             onMouseOver={() => setShowText(true)}
             onMouseOut={() => setShowText(false)}>
                 <div className="hero__top">
-                    <h4 className="hero__text left invisible">Certificados</h4>
+                    <h4 className="hero__text left">Certificados</h4>
                 </div>
                 <div className="hero__bottom">
                     <div></div>
