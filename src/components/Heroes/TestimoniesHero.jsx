@@ -15,7 +15,7 @@ const TestimoniesHero = () => {
             onClick={handleClickScroll}>
             <div className="hero__content">
                 <div className="hero__top">
-                    <h4 className="hero__text left">Testimonios</h4>
+                    <h4 className="hero__text left invisible">Testimonios</h4>
                 </div>
                 <div className="hero__bottom">
                     <div></div>
@@ -24,12 +24,12 @@ const TestimoniesHero = () => {
                     </i>
                 </div>
                 <div className="hero__center">
-                    <h1
+                    {/* <h1
                         className={`hero__center-text ${showText ? 'show' : ''}`}
                     >Sus comentarios me ayudan a crecer.</h1>
                     <h1
                         className={`hero__center-text ${showText ? 'show' : ''}`}
-                    >Sus comentarios me ayudan a crecer.</h1>
+                    >Sus comentarios me ayudan a crecer.</h1> */}
                 </div>
 
             </div>

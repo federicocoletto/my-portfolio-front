@@ -6,7 +6,7 @@
 }
 
 .testimonies__form {
-	background-color: rgba(148, 40, 139, 0.582);
+	background-color: var(--borders);
 	width: 100%;
 	height: 100%;
 	display: flex;
@@ -37,6 +37,8 @@
 	padding: .3rem .5rem;
 	border-radius: 1rem;
 	border: none;
+	background-color: var(--main-white);
+	opacity: 1;
 	/* box-shadow: 0 15px 30px 10px #00000055; */
 }
 
@@ -45,18 +47,11 @@
 }
 
 .form__input button {
-	padding: .4rem .6rem;
-	font-family: 'Agenor Neue', sans-serif;
-	letter-spacing: 1.5px;
-	width: max-content;
-	margin: auto;
-	border-radius: 1rem;
-	border: 2px solid white;
-	background-color: #0006;
+	background-color: var(--main-purple);
 }
 
 .testimonies__cards {
-	background-color: #0006;
+	background-color: var(--borders);
 	display: flex;
 	flex-flow: column-reverse;
 	gap: .4rem;
@@ -66,13 +61,13 @@
 	border-bottom-left-radius: 1rem;
 	border-top-right-radius: .3rem;
 	border-bottom-right-radius: .3rem;
-	border: 2px solid #0002;
+	border: 2px solid var(--borders);
 	padding: 1rem;
 }
 
 .testimony__card {
 	height: max-content;
-	background-color: #333;
+	background-color: var(--main-purple);
 	border-radius: 1rem;
 	width: 100%;
 	padding: .4rem;
@@ -86,21 +81,25 @@
 }
 
 .testimony__card p {
-	border-top: 2px solid #fff6;
+	border-top: 2px solid var(--borders);
 	padding-top: 1rem;
 }
 
 .testimonies__cards::-webkit-scrollbar {
-	width: .5rem;
+	width: .4rem;
 	border-radius: 1rem;
 }
 
 .testimonies__cards::-webkit-scrollbar-thumb {
-	background-color: red;
+	background-color: var(--main-purple);
 	border-radius: 1rem;
 }
 
 .testimonies__cards::-webkit-scrollbar-track {
-	background-color: rgb(223, 155, 155);
+	background-color: var(--main-black);
 	border-radius: 1rem;
+}
+
+.testimonies .part__title {
+	color: var(--main-purple);
 }

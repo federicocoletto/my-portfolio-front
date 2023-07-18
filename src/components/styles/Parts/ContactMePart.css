@@ -8,22 +8,20 @@
 
 .socials {
 	height: 100%;
-	display: grid;
-	grid-template-columns: .5fr .5fr;
-	gap: 1rem;
+	display: flex;
+	flex-wrap: wrap-reverse;
+	gap: .5rem;
 	transform: scale(8);
-	transition: transform .4s;
+	opacity: 0;
+	transition: transform .4s, opacity .3s;
+	position: relative;
+	z-index: -1;
 }
 
 .socials.show {
 	transform: scale(1);
-}
-
-
-@media (min-width: 768px) {
-	.socials {
-		grid-template-columns: .25fr .25fr .25fr .25fr;
-	}
+	opacity: 1;
+	z-index: 100;
 }
 
 .social {
@@ -37,8 +35,6 @@
 	align-items: center;
 	margin: auto;
 	border-radius: 1rem;
-	background-color: #0005;
-	color: white;
 	letter-spacing: 1.5px;
 	font-family: 'Agenor Neue', sans-serif;
 	position: relative;

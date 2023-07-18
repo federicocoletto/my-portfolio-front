@@ -1,0 +1,112 @@
+.certificates .part__title {
+	color: var(--main-yellow);
+}
+
+.certificates__container {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+	gap: 1rem;
+}
+
+.certificate {
+	border-radius: 1rem;
+	padding: 1rem;
+	background-color: var(--main-yellow);
+	display: grid;
+	grid-template-rows: 3.5rem 5rem 4.2rem;
+	gap: 1rem;
+	transform: scale(1);
+	transition: transform .3s, padding .4s;
+}
+
+.certificate:hover {
+	transform: scale(.97);
+}
+
+
+.certificate__title {
+	/* background-color: teal; */
+}
+
+.certificate__image {
+	width: 100%;
+	background-color: #fff;
+}
+
+.certificate__info {
+	/* background-color: yellowgreen; */
+	width: calc(100% - 2rem);
+	z-index: -1;
+	visibility: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: .3rem;
+	position: absolute;
+	width: 100%;
+	bottom: calc(100% - 5rem);
+	transition: bottom .5s ease-out, visibility .1s;
+}
+
+.certificate__info.show {
+	visibility: visible;
+	bottom: 1rem;
+}
+
+.certificate__info li {
+	/* background-color: var(--main-black); */
+	width: calc(100% - 2rem);
+	display: flex;
+	justify-content: space-between;
+}
+
+.certificate__year {
+	/* text-align: start; */
+}
+
+.certificate__institution {
+	/* text-align: start; */
+}
+
+.certificate__grade {
+	/* text-align: start; */
+}
+
+
+/* * skills */
+.hero__center.skills {
+	left: 100%;
+}
+
+.hero__center-text.skills {
+	display: flex;
+	gap: .5rem;
+}
+
+.skill {
+	display: grid;
+	grid-template-rows: 3rem 2rem;
+	min-width: 4rem;
+	max-width: 8rem;
+	row-gap: .5rem;
+}
+
+.skill__img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	background-color: transparent;
+}
+
+.skill__name {
+	display: grid;
+	place-content: center;
+	place-items: end;
+	text-align: center;
+}
+.skill__p {
+	font-size: .7rem;
+	letter-spacing: 1px;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 500;
+}

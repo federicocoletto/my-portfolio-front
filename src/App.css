@@ -3,7 +3,7 @@
 	width: 100%;
 	height: 100%;
 	margin: 0 auto;
-	background-color: black;
+	background-color: var(--main-white);
 	padding-bottom: 1rem;
 	/* padding: 1rem; */
 }
@@ -17,16 +17,16 @@
 }
 
 :root::-webkit-scrollbar {
-	width: 1rem;
+	width: .7rem;
 }
 
 :root::-webkit-scrollbar-thumb {
-	background-color: red;
-	border-radius: 4px;
+	background-color: var(--main-blue);
+	border-radius: .5rem;
 }
 
 :root::-webkit-scrollbar-track {
-	background-color: rgb(223, 155, 155);
+	background-color: var(--main-black);
 }
 
 .section {
@@ -41,7 +41,7 @@
 }
 
 .part__container {
-	min-height: 95vh;
+	min-height: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -52,37 +52,25 @@
 	*/
 }
 
-.part__title {
-	font-size: 1.3rem;
-	margin-bottom: .5rem;
-}
-
-.part__text {
-	font-family: 'Poppins', sans-serif;
-	font-size: .85rem;
-	font-weight: 300;
-	margin: .4rem 0;
-}
-
 .part__container.projects {
-	background-color: green;
+	background-color: var(--main-yellow);
 	min-height: 0;
 }
 
 .part__container.aboutme {
-	background-color: blue;
+	background-color: var(--main-blue);
 }
 
 .part__container.testimonies {
-	background-color: violet;
+	background-color: var(--main-pink);
 }
 
 .part__container.contactme {
-	background-color: tomato;
+	background-color: var(--main-brown);
 }
 
 .part__container.skills {
-	background-color: olive;
+	background-color: var(--main-lightblue);
 }
 
 .part__container.education {
@@ -90,9 +78,10 @@
 }
 
 .part__container.cv {
-	background-color: darkorange;
+	background-color: var(--main-purple);
 }
 
 .part__container.certificates {
-	background-color: darkred;
+	background-color: var(--main-red);
+	min-height: 100%;
 }

@@ -1,3 +1,4 @@
+import '../styles/Parts/AboutMePart.css'
 const AboutmePart = () => {
 	return (
 		<div id="aboutme" className="part">

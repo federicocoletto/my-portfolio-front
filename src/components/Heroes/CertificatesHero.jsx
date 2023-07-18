@@ -1,13 +1,18 @@
 import { useState } from "react"
 const CertificatesHero = () => {
     const [showText, setShowText] = useState(false)
+    const handleClickScroll = () => {
+		document.getElementById("certificates")?.scrollIntoView({ behavior: "smooth" });
+	};
     return (
         <div className="hero certificates">
             <div className="hero__content" 
             onMouseOver={() => setShowText(true)}
-            onMouseOut={() => setShowText(false)}>
-                <div className="hero__top">
+            onMouseOut={() => setShowText(false)}
+			onClick={handleClickScroll}>
+                <div className="hero__top ">
                     <h4 className="hero__text left">Certificados</h4>
+                    <div></div>
                 </div>
                 <div className="hero__bottom">
                     <div></div>
@@ -16,8 +21,8 @@ const CertificatesHero = () => {
                     </i>
                 </div>
                 <div className="hero__center">
-                    <h1 className={`hero__center-text faster ${showText ? 'show' : ''}`}>Mis credenciales.</h1>
-                    <h1 className={`hero__center-text faster ${showText ? 'show' : ''}`}>Mis credenciales.</h1>
+                    <h1 className={`hero__center-text faster ${showText ? 'show' : ''}`}>Certificados.</h1>
+                    <h1 className={`hero__center-text faster ${showText ? 'show' : ''}`}>Certificados.</h1>
                 </div>
             </div>
         </div>)

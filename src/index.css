@@ -9,15 +9,26 @@
 	line-height: 1.5;
 	letter-spacing: 1px;
 
-	color-scheme: light dark;
-	color: rgba(255, 255, 255, 0.87);
-	background-color: #000;
-
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-text-size-adjust: 100%;
+
+	/* colors */
+	--main-black: #121212;
+	--main-white: #ededed;
+	--main-red: #d62828;
+	--main-brown: #edc4b3;
+	--main-green: #8ac926;
+	--main-lightblue: #0096c7;
+	--main-blue: #4361ee;
+	--main-purple: #6850f5;
+	--main-pink: #dc23dc;
+	--main-yellow: #ffb703;
+	--borders: #0002;
+;
+
 }
 
 * {
@@ -28,12 +39,12 @@
 
 a {
 	/* font-weight: 500; */
-	color: #646cff;
+	color: var(--main-red);
 	text-decoration: inherit;
 }
 
 a:hover {
-	color: #535bf2;
+	color: var(--main-yellow);
 }
 
 body {
@@ -68,4 +79,38 @@ li {
 	padding: 0;
 	margin: 0;
 	text-align: center;
+}
+
+.container {
+	max-width: 100%;
+	width: 100%;
+}
+
+.light-text {
+	color: var(--main-black);
+	fill: var(--main-black);
+}
+
+.dark-text {
+	color: var(--main-white);
+	fill: var(--main-white);
+}
+
+button {
+	padding: .4rem .6rem;
+	font-family: 'Agenor Neue', sans-serif;
+	letter-spacing: 1.5px;
+	width: max-content;
+	margin: auto;
+	border-radius: 1rem;
+	border: 2px solid var(--borders);
+}
+
+.part__title {
+	font-size: 1.3rem;
+	margin-bottom: .5rem;
+}
+
+.part__header {
+	margin-bottom: 2rem;
 }
