@@ -12,7 +12,7 @@ const CVHero = () => {
                 </div>
                 <div className="hero__bottom">
                     <i className={`hero__text right ${showText ? 'fa-solid fa-folder-open fa-beat' : 'fa-solid fa-folder'}`}>
-                        <a title="FedericoColettoCV.pdf" href="/public/CV-fedecoletto.pdf" download={'CV-fedecoletto.pdf'}></a>
+                        <a title="FedericoColettoCV.pdf" href="/CV-fedecoletto.pdf" download={'CV-fedecoletto.pdf'}></a>
                     </i>
                 </div>
                 <div className="hero__center">

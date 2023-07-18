@@ -5,27 +5,27 @@ const SkillsHero = () => {
     const mySkills = [
         {
             name: 'HTML',
-            logo: '/public/images/skills-logos/html.png',
+            logo: '/images/skills-logos/html.png',
         },
         {
             name: 'CSS',
-            logo: '/public/images/skills-logos/css.png',
+            logo: '/images/skills-logos/css.png',
         },
         {
             name: 'JS',
-            logo: '/public/images/skills-logos/js.png',
+            logo: '/images/skills-logos/js.png',
         },
         {
             name: 'React',
-            logo: '/public/images/skills-logos/reactjs.png',
+            logo: '/images/skills-logos/reactjs.png',
         },
         {
             name: 'NodeJS',
-            logo: '/public/images/skills-logos/nodejs.png',
+            logo: '/images/skills-logos/nodejs.png',
         },
         {
             name: 'Bootstrap',
-            logo: '/public/images/skills-logos/bootstrap.png',
+            logo: '/images/skills-logos/bootstrap.png',
         },
     ]
 

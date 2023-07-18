@@ -7,7 +7,7 @@ const ProjectsPart = () => {
 	const projects = [
 		{
 			id: 1,
-			image: '/public/images/eCommerce-js.png',
+			image: '/images/eCommerce-js.png',
 			netlify: 'https://playful-frangipane-713d64.netlify.app/',
 			github: 'https://github.com/federicocoletto/eCommerce.git',
 			pname: 'eCommerce',
