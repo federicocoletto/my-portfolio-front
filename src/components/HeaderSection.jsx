@@ -10,7 +10,7 @@ const HeaderSection = () => {
 				<p>COLETTO</p>
 			</div>
 			<div className="header__intro">
-				<p>Hola, soy un programador junior</p>
+				{/* <p>Hola, soy un programador junior</p> */}
 			</div>
 		</header>
 	)
