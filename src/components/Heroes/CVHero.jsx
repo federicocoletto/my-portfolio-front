@@ -11,13 +11,13 @@ const CVHero = () => {
                     <h4 className="hero__text left">CV</h4>
                 </div>
                 <div className="hero__bottom">
-                    <i className={`hero__text right ${showText ? 'fa-solid fa-folder-open fa-beat' : 'fa-solid fa-folder'}`}>
-                        <a title="FedericoColettoCV.pdf" href="/CV-fedecoletto.pdf" download={'CV-fedecoletto.pdf'}></a>
-                    </i>
+                    <a title="FedericoColettoCV.pdf" href="/CV-fedecoletto.pdf" download={'CV-fedecoletto.pdf'}>
+                        <i className={`hero__text right ${showText ? 'fa-solid fa-folder-open fa-beat' : 'fa-solid fa-folder'}`}></i>
+                    </a>
                 </div>
                 <div className="hero__center">
                     <p className={`download__span ${showText ? 'show' : ''}`}>Descargar PDF</p>
-				</div>
+                </div>
             </div>
         </div>
     )
