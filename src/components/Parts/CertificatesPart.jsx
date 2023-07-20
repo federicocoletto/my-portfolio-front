@@ -1,19 +1,13 @@
 import '../styles/Parts/CertificatesPart.css'
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const CertificatesPart = () => {
-	const [showCertificate, setShowCertificate] = useState(false);
-	const [showSkills, setShowSkills] = useState(false);
-	const handleShowSkills = (e) => {
-		e.stopPropagation()
-		setShowSkills(!showSkills)
-	}
 
 	const certificates = [
 		{
 			id: 1,
 			title: 'Primeros Pasos del Desarrollo Frontend',
-			image: '/public/certificates-imges/ticmas1.png',
+			image: '/certificates-imges/ticmas1.png',
 			issue_date: '27.02.2023',
 			institution: 'Ticmas',
 			certificate_id: '18aa8ad6-940b-428e-8fe1-dbbcaacb37ae',
@@ -28,7 +22,7 @@ const CertificatesPart = () => {
 		{
 			id: 2,
 			title: 'Fundamentos de Desarrollo Web',
-			image: '/public/certificates-imges/fundamentos-de-desarrollo-web.png',
+			image: '/certificates-imges/fundamentos-de-desarrollo-web.png',
 			issue_date: '14.04.2023',
 			institution: 'Academlo',
 			certificate_id: '18366315288126',
@@ -45,7 +39,7 @@ const CertificatesPart = () => {
 		{
 			id: 3,
 			title: 'Desarrollo de Aplicaciones Web con React',
-			image: '/public/certificates-imges/apps-react.png',
+			image: '/certificates-imges/apps-react.png',
 			issue_date: '14.04.2023',
 			institution: 'Academlo',
 			certificate_id: '48572812898340',
@@ -63,10 +57,28 @@ const CertificatesPart = () => {
 		},
 	]
 
-	console.log(showSkills)
+	const [shownCertificate, setShownCertificate] = useState(null);
+
+	const handleShowClick = (e) => {
+		e.stopPropagation()
+		const certifId = +e.target.className.split(' ')[4]
+		setShownCertificate(certifId)
+		if (shownCertificate !== certifId) {
+			setShownCertificate(certifId)
+		} else {
+			setShownCertificate(null)
+		}
+	}
+
+
+	useEffect(() => {
+		console.log(shownCertificate)
+	}, [shownCertificate]);
 
 	return (
-		<div id="certificates" className="part certificates" onClick={() => setShowSkills(false)}>
+		<div id="certificates" className="part certificates"
+			onClick={() => setShownCertificate(null)}
+		>
 			<div className="part__container certificates">
 				<header className="part__header">
 					<h1 className="part__title">Mis certificados</h1>
@@ -74,32 +86,39 @@ const CertificatesPart = () => {
 				<div className="part__body certificates__container">
 					{
 						certificates.map(certif => (
-							<div className='certificate' key={certif.id} onClick={() => setShowCertificate(true)}>
-								<h2 className="certificate__title">{certif.title}</h2>
-								<div className="certificate__image">
-									<img src={certif.image} alt={certif.title} />
+							<div className={`certificates ${shownCertificate ? 'active' : ''}`} key={certif.id}>
+								<div className="certificate__header">
+									<h2 className="certificate__title">{certif.title}</h2>
+									<i className={`show-skills__button fa-solid fa-circle-down sm ${certif.id} ${shownCertificate === certif.id && 'hide'}`} onClick={handleShowClick}></i>
 								</div>
-								<ul className='certificate__info'>
-									<li className="certificate__year"><span>Año: </span>{certif.issue_date}</li>
-									<li className="certificate__institution"><span>Institución: </span>{certif.institution}</li>
-									<li className="certificate__grade"><span>Nota: </span>{certif.grade}</li>
-								</ul>
-								<i className="show-skills__button fa-solid fa-circle-down" onClick={handleShowSkills}></i>
-								<ul className="certificate__skills">
-								{ showSkills
-									?
-									certif.skills_learned.map((sk, i) => (
-										<li key={i} className={`certificate__skill ${showSkills ? 'active' : ''}`}>{sk}</li>
-									))
-									: ''
+								{
+									shownCertificate === certif.id && (
+										<div className='certificate__details'>
+											<div className="certificate__image">
+												<img src={certif.image} alt={certif.title} />
+											</div>
+											<ul className='certificate__info-ul'>
+												<li className="certificate__info-li sm"><span className='sm'>Año </span>{certif.issue_date}</li>
+												<li className="certificate__info-li sm"><span className='sm'>Institución </span>{certif.institution}</li>
+												<li className="certificate__info-li sm"><span className='sm'>Nota </span>{certif.grade}</li>
+											</ul>
+											<ul className="skills__learned-ul">
+												<h2 className="skills__learned-h2 sm">Lenguajes, librerías y frameworks aprendidos</h2>
+												{
+													certif.skills_learned.map((sk, i) => (
+														<li key={i} className={`skills__learned-li sm`}>{sk}</li>
+													))
+												}
+											</ul>
+										</div>
+									)
 								}
-								</ul>
 							</div>
 						))
 					}
 				</div>
 			</div>
-		</div>
+		</div >
 	)
 };
 
