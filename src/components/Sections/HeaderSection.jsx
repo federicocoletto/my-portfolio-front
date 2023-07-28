@@ -1,8 +1,9 @@
-import './styles/HeaderSection.css'
+/* eslint-disable react/prop-types */
+import '../styles/HeaderSection.css'
 
-const HeaderSection = () => {
+const HeaderSection = ({darkmodeState}) => {
 	return (
-		<header className="app__header section">
+		<header className={`app__header section ${darkmodeState && 'dark'}`}>
 			<div className="header__name">
 				<p>FEDERICO</p>
 			</div>

@@ -1,3 +1,7 @@
+.part.projects {
+	border-top: 1px solid var(--borders);
+}
+
 .carousel {
 	background-color: transparent;
 	overflow: hidden;
@@ -38,7 +42,7 @@
 	object-fit: cover;
 	object-position: top;
 	margin: 3rem;
-	border-radius: .5rem;
+	border-radius: .1rem;
 	box-shadow: 0px 15px 30px -10px var(--main-black);
 	border: 1px solid var(--borders);
 }
@@ -56,8 +60,8 @@
 	transition: opacity .3s;
 	opacity: 0;
 	visibility: hidden;
-	border-top-left-radius: 1rem;
-	border-bottom-left-radius: 1rem;
+	/* border-top-left-radius: 1rem;
+	border-bottom-left-radius: 1rem; */
 }
 
 .carousel__image-hover.show {
@@ -95,36 +99,67 @@
 
 }
 
+.item__title {}
+
+.item__description {
+	font-family: 'Poppins', sans-serif;
+}
+
 .carousel__footer {
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	/*
-	*/
 }
 
-.carousel__button > button {
-	background-color: var(--main-red);
-}
-
-.carousel__button > button.hide {
+.prev__button,
+.next__button {
+	display: grid;
+	place-content: center;
 	position: relative;
+	bottom: 24rem;
+	cursor: pointer;
+}
+
+.carousel__button.false {
+	/* display: none; */
+}
+
+.carousel__button {
+	transition: opacity .3s;
+	opacity: 1;
+}
+
+.carousel__button.hide {
+	opacity: 0;
+}
+
+.prev__button.hide,
+.next__button.hide {
 	visibility: hidden;
+}
+
+.carousel__dots {
+	background-color: yellowgreen;
+	height: 2rem;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 .carousel__dot {
 	width: .8rem;
 	height: .8rem;
 	border-radius: 50%;
-	border: 2px solid var(--main-brown);
+	border: 2px solid var(--dark-blue);
 	cursor: pointer;
 	background: transparent;
 }
 
 .carousel__dot.active {
 	background: var(--main-red);
-	transition: background .3s;	
+	transition: background .3s;
 }
 
 .item__title {

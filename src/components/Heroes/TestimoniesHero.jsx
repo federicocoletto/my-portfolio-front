@@ -1,6 +1,7 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react"
 
-const TestimoniesHero = () => {
+const TestimoniesHero = ({darkmodeState}) => {
     const [showText, setShowText] = useState(false)
 
     const handleClickScroll = () => {
@@ -9,7 +10,7 @@ const TestimoniesHero = () => {
 
     return (
         <div
-            className="hero testimonies"
+            className={`hero testimonies ${darkmodeState ? '' : 'light'}`}
             onMouseOver={() => setShowText(true)}
             onMouseOut={() => setShowText(false)}
             onClick={handleClickScroll}>

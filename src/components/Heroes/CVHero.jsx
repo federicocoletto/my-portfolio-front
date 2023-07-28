@@ -1,8 +1,12 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react"
-const CVHero = () => {
+
+const CVHero = ({ darkmodeState }) => {
+
     const [showText, setShowText] = useState(false)
+
     return (
-        <div className="hero cv">
+        <div className={`hero cv ${darkmodeState ? '' : 'light'}`}>
             <div className="hero__content"
                 onMouseOver={() => setShowText(true)}
                 onMouseOut={() => setShowText(false)}

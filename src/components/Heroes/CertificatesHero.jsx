@@ -1,16 +1,17 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react"
-const CertificatesHero = () => {
+const CertificatesHero = ({darkmodeState}) => {
     const [showText, setShowText] = useState(false)
     const handleClickScroll = () => {
 		document.getElementById("certificates")?.scrollIntoView({ behavior: "smooth" });
 	};
     return (
-        <div className="hero certificates">
+        <div className={`hero certificates ${darkmodeState ? '' : 'light'}`}>
             <div className="hero__content" 
             onMouseOver={() => setShowText(true)}
             onMouseOut={() => setShowText(false)}
 			onClick={handleClickScroll}>
-                <div className="hero__top ">
+                <div className="hero__top invisible">
                     <h4 className="hero__text left">Certificados</h4>
                     <div></div>
                 </div>

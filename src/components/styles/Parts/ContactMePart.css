@@ -62,6 +62,6 @@
 }
 
 .social__span {
-	color: black;
+	color: var(--main-white);
 	font-size: 1rem;
 }

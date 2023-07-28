@@ -1,7 +1,8 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react"
 import '../styles/Parts/ContactMePart.css'
 
-const ContactHero = () => {
+const ContactHero = ({darkmodeState}) => {
 
     const [expandFirst, setExpandFirst] = useState(false);
     const [expandSecond, setExpandSecond] = useState(false);
@@ -13,13 +14,13 @@ const ContactHero = () => {
 
     return (
         <div
-            className="hero contact"
+            className={`hero contact ${darkmodeState ? '' : 'light'}`}
             onMouseOver={() => setShowText(true)}
             onMouseOut={() => setShowText(false)}
             onClick={handleScroll} >
             <div className="hero__content">
                 <div className="hero__top">
-                    <h4 className="hero__text left">Contácteme</h4>
+                    <h4 className="hero__text left">Contacto</h4>
                 </div>
                 <div className="hero__bottom">
                     <i className="hero__text right">

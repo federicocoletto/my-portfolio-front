@@ -1,8 +1,6 @@
 import { useState } from "react";
 import '../styles/Parts/ProjectsPart.css'
 const ProjectsPart = () => {
-	const [showImg, setShowImg] = useState(false)
-	const [projectPosition, setProjectPosition] = useState(0)
 
 	const projects = [
 		{
@@ -63,6 +61,9 @@ const ProjectsPart = () => {
 		},
 	]
 
+	const [showImg, setShowImg] = useState(false)
+	const [projectPosition, setProjectPosition] = useState(0)
+
 	const handleNext = () => {
 		if (projectPosition <= (projects.length - 1)) {
 			setProjectPosition(projectPosition + 1)
@@ -74,7 +75,7 @@ const ProjectsPart = () => {
 		}
 	}
 	return (
-		<section id="projects" className="part">
+		<section id="projects" className="part projects">
 			<div className="part__container projects">
 				<header className="part__header">
 					<h2 className="part__title">Mis proyectos</h2>
@@ -104,18 +105,20 @@ const ProjectsPart = () => {
 						}
 					</div>
 					<footer className="carousel__footer">
-						<div className="carousel__button">
-							<button className={`button previous ${projectPosition === 0 && 'hide'}`}  onClick={handlePrev}>prev</button>
+						<div className={`carousel__button ${showImg && 'hide'}`}>
+							<i className={`fa-solid fa-angles-left prev__button ${projectPosition === 0 && 'hide'}`} onClick={handlePrev}></i>
 						</div>
-						<div className={`carousel__dot ${projectPosition === 0 ? 'active' : ''}`} onClick={() => setProjectPosition(0)}></div>
-						<div className={`carousel__dot ${projectPosition === 1 ? 'active' : ''}`} onClick={() => setProjectPosition(1)}></div>
-						<div className={`carousel__dot ${projectPosition === 2 ? 'active' : ''}`} onClick={() => setProjectPosition(2)}></div>
-						<div className={`carousel__dot ${projectPosition === 3 ? 'active' : ''}`} onClick={() => setProjectPosition(3)}></div>
-						<div className={`carousel__dot ${projectPosition === 4 ? 'active' : ''}`} onClick={() => setProjectPosition(4)}></div>
-						<div className={`carousel__dot ${projectPosition === 5 ? 'active' : ''}`} onClick={() => setProjectPosition(5)}></div>
-						<div className={`carousel__dot ${projectPosition === 6 ? 'active' : ''}`} onClick={() => setProjectPosition(6)}></div>
-						<div className="carousel__button">
-							<button className={`button next ${projectPosition === 6 && 'hide'}`}  onClick={handleNext}>next</button>
+						<div className="carousel__dots">
+							<div className={`carousel__dot ${projectPosition === 0 ? 'active' : ''}`} onClick={() => setProjectPosition(0)}></div>
+							<div className={`carousel__dot ${projectPosition === 1 ? 'active' : ''}`} onClick={() => setProjectPosition(1)}></div>
+							<div className={`carousel__dot ${projectPosition === 2 ? 'active' : ''}`} onClick={() => setProjectPosition(2)}></div>
+							<div className={`carousel__dot ${projectPosition === 3 ? 'active' : ''}`} onClick={() => setProjectPosition(3)}></div>
+							<div className={`carousel__dot ${projectPosition === 4 ? 'active' : ''}`} onClick={() => setProjectPosition(4)}></div>
+							<div className={`carousel__dot ${projectPosition === 5 ? 'active' : ''}`} onClick={() => setProjectPosition(5)}></div>
+							<div className={`carousel__dot ${projectPosition === 6 ? 'active' : ''}`} onClick={() => setProjectPosition(6)}></div>
+						</div>
+						<div className={`carousel__button ${showImg && 'hide'}`}>
+							<i className={`fa-solid fa-angles-right next__button ${projectPosition === 6 && 'hide'}`} onClick={handleNext}></i>
 						</div>
 					</footer>
 				</div>

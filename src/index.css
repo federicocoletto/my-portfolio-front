@@ -3,7 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,600;0,800;1,200;1,300;1,400;1,500&display=swap');
 
 :root {
-	font-family: 'Hero';
 	font-family: 'Poppins', sans-serif;
 	font-family: 'Agenor Neue', sans-serif;
 	line-height: 1.5;
@@ -18,18 +17,13 @@
 	-webkit-text-size-adjust: 100%;
 
 	/* colors */
-	--main-black: #121212;
+	--main-black: #0a0a0c;
 	--main-white: #ededed;
-	--main-red: #d62828;
-	--main-brown: #edc4b3;
-	--main-green: #8ac926;
-	--main-lightblue: #0096c7;
-	--main-blue: #4361ee;
-	--main-purple: #6850f5;
-	--main-pink: #dc23dc;
-	--main-yellow: #ffb703;
+	--dark-blue: #071635;
+	--light-blue: #1b2ead;
+	--dark-red: #690b0b;
+	--light-red: #a70b0b;
 	--borders: #0002;
-;
 
 }
 
@@ -40,8 +34,7 @@
 }
 
 a {
-	/* font-weight: 500; */
-	color: var(--main-black);
+	color: var(--main-white);
 	text-decoration: inherit;
 }
 
@@ -53,12 +46,10 @@ body {
 	margin: 0;
 	min-width: 320px;
 	min-height: 100vh;
-	/* padding: 1rem; */
 }
 
 h1 {
-	/* font-size: 3.2em; */
-	line-height: 1.1;
+	line-height: 1.5;
 }
 
 sup {
@@ -88,16 +79,6 @@ li {
 	width: 100%;
 }
 
-.light-text {
-	color: var(--main-black);
-	fill: var(--main-black);
-}
-
-.dark-text {
-	color: var(--main-white);
-	fill: var(--main-white);
-}
-
 button {
 	padding: .4rem .6rem;
 	font-family: 'Agenor Neue', sans-serif;
@@ -109,14 +90,12 @@ button {
 	cursor: pointer;
 }
 
-.part__title {
-	font-size: 1.3rem;
-	margin-bottom: 1rem;
-}
-
 .hero__text.left {
 	font-size: 1rem;
-	text-transform: uppercase;
-	font-weight: 700;
+	/* text-transform: uppercase; */
+	font-weight: 600;
+	font-family: 'Hero';
+	font-family: 'Poppins', sans-serif;
+	font-family: 'Agenor Neue', sans-serif;
 }
 

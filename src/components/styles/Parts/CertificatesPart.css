@@ -10,7 +10,7 @@
 	padding: 1rem 0;
 }
 
-.certificates {
+.certificates__container {
 	border-bottom: 2px solid var(--borders);
 }
 
@@ -37,7 +37,7 @@
 	width: 100%;
 	text-align: center;
 	border-radius: 1rem;
-	transition: all .3s;
+	transition: background .35s, color .35s;
 }
 
 .show-skills__button:hover,
@@ -55,8 +55,15 @@
 	padding: 1rem 1rem .5rem;
 }
 
+.certificate__image {
+	display: grid;
+	place-content: center;
+}
+
 .certificate__image img {
 	width: 100%;
+	max-width: 30rem;
+	margin: 0 auto;
 }
 
 .certificate__info-ul {
