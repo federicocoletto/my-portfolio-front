@@ -20,13 +20,13 @@
 	cursor: pointer;
 	transform: scale(1);
 	transition: transform .3s, background .3s;
-	color: var(--main-white);
-	background-color: var(--dark-red);
+	color: var(--white);
+	background-color: var(--purple);
 }
 
 .hero.light {
-	background-color: var(--dark-blue);
-	color: var(--main-white);
+	background-color: var(--purple);
+	color: var(--white);
 }
 
 .hero:hover {
@@ -58,7 +58,7 @@
 	height: 100%;
 	display: flex;
 	align-items: center;
-	color: var(--main-white);
+	color: var(--white);
 }
 
 .right {
@@ -76,17 +76,17 @@
 .hero__center {
 	width: max-content;
 	position: absolute;
-	top: 52%;
+	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	transform: translate(-25%, -50%);
 	display: flex;
 	flex-flow: row nowrap;
 }
 
 .hero__center-text {
 	width: max-content;
-	padding: 0 .2rem;
-	animation: scroll 5.5s linear infinite forwards;
+	/* padding: 0 .2rem; */
+	animation: scroll 5.5s linear infinite;
 	visibility: hidden;
 	word-spacing: .2rem;
 	font-size: 1.3em;
@@ -95,11 +95,11 @@
 }
 
 .hero__text.right svg {
-	fill: var(--main-white);
+	fill: var(--white);
 }
 
 .hero__center-text.faster {
-	animation: scroll 3s linear infinite forwards;
+	animation: scroll 3s linear infinite;
 }
 
 .hero__center-text.show {
@@ -144,6 +144,14 @@
 
 /* + first */
 .hero.contact {
+	--black: #0a0a0c;
+	--white: #ededed;
+	--blue: #1f306e;
+	--purple: #553772;
+	--dark-pink: #8f3b76;
+	--pink: #8f3b76;
+	--salmon: #f5487f;
+	--borders: #0002;
 	height: 100%;
 }
 

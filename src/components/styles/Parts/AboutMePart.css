@@ -1,7 +1,14 @@
-.aboutme .part__text {
+.part__text {
+	font-family: 'Poppins', sans-serif;
 	margin: .5rem 0;
+	font-weight: 300;
+}
+
+.part__text a:hover {
+	color: var(--blue);
+	font-weight: 400;
 }
 
 .part__text a {
-	color: var(--main-brown);
+	color: var(--salmon);
 }

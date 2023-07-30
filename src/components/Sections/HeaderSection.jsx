@@ -3,7 +3,7 @@ import '../styles/HeaderSection.css'
 
 const HeaderSection = ({darkmodeState}) => {
 	return (
-		<header className={`app__header section ${darkmodeState && 'dark'}`}>
+		<header className={`app__header section ${darkmodeState ? '' : 'light'}`}>
 			<div className="header__name">
 				<p>FEDERICO</p>
 			</div>

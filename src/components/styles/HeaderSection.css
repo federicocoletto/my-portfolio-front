@@ -1,5 +1,10 @@
 .app__header.section {
 	height: 20rem;
+	transition: color .3s;
+}
+
+.app__header.section.light {
+	color: var(--black);
 }
 
 .header__name,

@@ -10,17 +10,19 @@ import { useState } from "react";
 
 function App() {
 	const [darkmodeState, setDarkmodeState] = useState(true);
-	
+
 	return (
-		<div className={`app ${darkmodeState ? '' : 'light'}`}>
-			<DarkMode darkmodeState={darkmodeState} setDarkmodeState={setDarkmodeState}/>
-			<HeaderSection darkmodeState={darkmodeState}/>
-			<HeroesSection darkmodeState={darkmodeState}/>
-			{/* Parts */}
-			<ProjectsPart darkmodeState={darkmodeState}/>
-			<AboutmePart darkmodeState={darkmodeState}/>
-			<TestimoniesPart darkmodeState={darkmodeState}/>
-			<CertificatesPart darkmodeState={darkmodeState}/>
+		<div className={`app__container ${darkmodeState ? '' : 'light'}`}>
+			<div className="app">
+				<DarkMode darkmodeState={darkmodeState} setDarkmodeState={setDarkmodeState} />
+				<HeaderSection darkmodeState={darkmodeState} />
+				<HeroesSection darkmodeState={darkmodeState} />
+				{/* Parts */}
+				<ProjectsPart darkmodeState={darkmodeState} />
+				<AboutmePart darkmodeState={darkmodeState} />
+				<TestimoniesPart darkmodeState={darkmodeState} />
+				<CertificatesPart darkmodeState={darkmodeState} />
+			</div>
 		</div>
 	)
 }

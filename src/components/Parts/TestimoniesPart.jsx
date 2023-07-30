@@ -28,16 +28,14 @@ const TestimoniesPart = () => {
 					<h2 className='part__title testimonies'>Testomonios</h2>
 					<h4 className='part__subtitle testimonies'>Sus comentarios me ayudan a mejorar :).</h4>
 				</div>
-				<form className="part__body testimonies__form" onSubmit={handleSubmit(submit)} >
-					<div className="form__input name testimonies">
-						<label htmlFor="name">Nombre</label>
-						<input type="text" {...register('name')} id='name' />
+				<form className="testimonies__form" onSubmit={handleSubmit(submit)} >
+					<div className="form__input name">
+						<input type="text" {...register('name')} id='name' placeholder="Name" />
 					</div>
-					<div className="form__input comment testimonies">
-						<label htmlFor="comment">Comentario</label>
-						<input type="text" {...register('comment')} id='comment' />
+					<div className="form__input comment">
+						<input type="text" {...register('comment')} id='comment' placeholder="Comment" />
 					</div>
-					<div className="form__input button">
+					<div className="form__button">
 						<button>Agregar testimonio</button>
 					</div>
 				</form>

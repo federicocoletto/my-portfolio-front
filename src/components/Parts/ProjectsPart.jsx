@@ -17,7 +17,7 @@ const ProjectsPart = () => {
 			netlify: 'https://glowing-arithmetic-3a492b.netlify.app/',
 			github: 'https://github.com/federicocoletto/fortune-cookies.git',
 			pname: 'Fortune Cookes',
-			description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat fugiat harum et recusandae eum, modi error reprehenderit necessitatibus eos veniam iste voluptates voluptatibus quo molestiae dicta tempore corporis eveniet vero? Perferendis, aliquam eaque vel adipisci culpa consequatur. Voluptatibus voluptates, repellat quisquam tenetur atque id, unde, suscipit fugit eos debitis vel corporis. Possimus debitis commodi iure reprehenderit magni repudiandae aut inventore!',
+			description: 'Suscipit fugit eos debitis vel corporis. Possimus debitis commodi iure reprehenderit magni repudiandae aut inventore!',
 		},
 		{
 			id: 3,
@@ -82,6 +82,10 @@ const ProjectsPart = () => {
 					<h3 className="part__subtitle">Descubra los trabajos que me han enseñado lo que sé hasta ahora.</h3>
 				</header>
 				<div className="carousel">
+					<div className="carousel__buttons">
+						<i className={`fa-solid fa-angles-left prev__button ${projectPosition === 0 && 'hide'} carousel__button`} onClick={handlePrev}></i>
+						<i className={`fa-solid fa-angles-right next__button ${projectPosition === 6 && 'hide'} carousel__button`} onClick={handleNext}></i>
+					</div>
 					<div className="carousel__items" style={{ transform: `translateX(calc(-${projectPosition}00% / 7))` }}>
 						{
 							projects.map(project => (
@@ -104,23 +108,17 @@ const ProjectsPart = () => {
 							))
 						}
 					</div>
-					<footer className="carousel__footer">
-						<div className={`carousel__button ${showImg && 'hide'}`}>
-							<i className={`fa-solid fa-angles-left prev__button ${projectPosition === 0 && 'hide'}`} onClick={handlePrev}></i>
-						</div>
-						<div className="carousel__dots">
-							<div className={`carousel__dot ${projectPosition === 0 ? 'active' : ''}`} onClick={() => setProjectPosition(0)}></div>
-							<div className={`carousel__dot ${projectPosition === 1 ? 'active' : ''}`} onClick={() => setProjectPosition(1)}></div>
-							<div className={`carousel__dot ${projectPosition === 2 ? 'active' : ''}`} onClick={() => setProjectPosition(2)}></div>
-							<div className={`carousel__dot ${projectPosition === 3 ? 'active' : ''}`} onClick={() => setProjectPosition(3)}></div>
-							<div className={`carousel__dot ${projectPosition === 4 ? 'active' : ''}`} onClick={() => setProjectPosition(4)}></div>
-							<div className={`carousel__dot ${projectPosition === 5 ? 'active' : ''}`} onClick={() => setProjectPosition(5)}></div>
-							<div className={`carousel__dot ${projectPosition === 6 ? 'active' : ''}`} onClick={() => setProjectPosition(6)}></div>
-						</div>
-						<div className={`carousel__button ${showImg && 'hide'}`}>
-							<i className={`fa-solid fa-angles-right next__button ${projectPosition === 6 && 'hide'}`} onClick={handleNext}></i>
-						</div>
-					</footer>
+					{/* <footer className="carousel__footer"> */}
+					<div className="carousel__dots">
+						<div className={`carousel__dot ${projectPosition === 0 ? 'active' : ''}`} onClick={() => setProjectPosition(0)}></div>
+						<div className={`carousel__dot ${projectPosition === 1 ? 'active' : ''}`} onClick={() => setProjectPosition(1)}></div>
+						<div className={`carousel__dot ${projectPosition === 2 ? 'active' : ''}`} onClick={() => setProjectPosition(2)}></div>
+						<div className={`carousel__dot ${projectPosition === 3 ? 'active' : ''}`} onClick={() => setProjectPosition(3)}></div>
+						<div className={`carousel__dot ${projectPosition === 4 ? 'active' : ''}`} onClick={() => setProjectPosition(4)}></div>
+						<div className={`carousel__dot ${projectPosition === 5 ? 'active' : ''}`} onClick={() => setProjectPosition(5)}></div>
+						<div className={`carousel__dot ${projectPosition === 6 ? 'active' : ''}`} onClick={() => setProjectPosition(6)}></div>
+					</div>
+					{/* </footer> */}
 				</div>
 			</div>
 		</section>
