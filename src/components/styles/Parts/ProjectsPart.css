@@ -4,6 +4,10 @@
 	position: relative;
 }
 
+.part__container.projects .part__subtitle {
+	margin-bottom: 0;
+}
+
 .carousel {
 	background-color: transparent;
 	overflow: hidden;
@@ -13,11 +17,9 @@
 }
 
 .carousel__buttons {
-	position: absolute;
-	width: calc(100% - 2.5rem);
+	width: 25%;
+	margin: auto;
 	height: 2rem;
-	top: 15rem;
-	left: 1.25rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -49,7 +51,6 @@
 }
 
 .carousel__item {
-	padding: 0 1rem;
 	width: calc(100% / 7);
 	display: grid;
 	row-gap: 1.5em;
@@ -135,7 +136,8 @@
 }
 
 .carousel__dots {
-	width: 100%;
+	width: 50%;
+	margin: auto;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;

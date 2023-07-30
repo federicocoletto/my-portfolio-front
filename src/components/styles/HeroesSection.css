@@ -2,8 +2,6 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 1rem;
-	/* margin: 0 2rem; */
 }
 
 .heroes.container {

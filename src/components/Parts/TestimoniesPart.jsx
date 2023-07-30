@@ -26,7 +26,6 @@ const TestimoniesPart = () => {
 			<div className="part__container testimonies">
 				<div className="part__header testimonies">
 					<h2 className='part__title testimonies'>Testomonios</h2>
-					<h4 className='part__subtitle testimonies'>Sus comentarios me ayudan a mejorar :).</h4>
 				</div>
 				<form className="testimonies__form" onSubmit={handleSubmit(submit)} >
 					<div className="form__input name">

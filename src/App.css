@@ -39,14 +39,16 @@
 
 	margin: 0 auto;
 	color: var(--white);
+	padding: 0 2rem;
 }
 
 /* + DARKMODE */
 .darkmode__container {
-	height: 2rem;
-	width: 2rem;
+	height: 1.75rem;
+	width: 1.75rem;
 	position: fixed;
 	top: 0;
+	left: .14rem;
 	background-color: var(--purple);
 	border-radius: 50%;
 	cursor: pointer;
@@ -82,16 +84,17 @@
 	display: grid;
 	place-content: center;
 	width: auto;
-	margin: 0 1rem;
+	/* margin: 0 2.5rem; */
 }
 
 /* ? PARTS */
 .part {
-	margin: 1rem 2rem;
 	background-color: var(--purple);
 	border-radius: 1rem;
+	width: 100%;
 	max-width: 40rem;
 	margin: auto;
+	/* margin: 0rem 2.5rem; */
 }
 
 .part__container {
@@ -107,7 +110,12 @@
 }
 
 .part__container.projects {
-	min-height: 0;
+	padding: 0;
+	padding-bottom: 1rem;
+}
+
+.part__container.projects > header {
+	padding: 1rem;
 }
 
 .part__container.aboutme {
