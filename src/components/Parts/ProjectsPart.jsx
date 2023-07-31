@@ -9,7 +9,7 @@ const ProjectsPart = () => {
 			netlify: 'https://playful-frangipane-713d64.netlify.app/',
 			github: 'https://github.com/federicocoletto/eCommerce.git',
 			pname: 'eCommerce (JS)',
-			description: 'El primer proyecto que consistió en diseñar toda una página web. En este proyecto plasmé lo que aprendí durante el curso de Fundamentos de Desarrollo Web.',
+			description: 'El primer proyecto que consistió en diseñar toda una página web. En este eCommerce plasmé lo que aprendí durante el curso de "Fundamentos de Desarrollo Web".',
 		},
 		{
 			id: 2,
