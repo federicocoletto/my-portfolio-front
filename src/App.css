@@ -2,7 +2,6 @@
 	width: auto;
 	height: 100%;
 	margin: 0 auto;
-	padding-bottom: 1rem;
 }
 
 :root::-webkit-scrollbar {
@@ -20,13 +19,17 @@
 
 .app__container {
 	background-color: var(--black);
+	/* background-image: url('/public/denim.webp'); */
 	width: 100%;
-	transition: background .35s, color .35s;
+	transition: background .25s, color .25s;
+	padding-bottom: 1rem;
 }
 
 .app__container.light {
 	background-color: var(--white);
-	transition: background .35s, color .35s;
+	/* background-image: url('/public/45degreee_fabric.webp'); */
+	background-image: none;
+	transition: background .25s, color .25s;
 }
 
 .app {
@@ -47,7 +50,7 @@
 	height: 1.75rem;
 	width: 1.75rem;
 	position: fixed;
-	top: 0;
+	top: .14rem;
 	left: .14rem;
 	background-color: var(--purple);
 	border-radius: 50%;
@@ -80,13 +83,6 @@
 	font-size: 1rem;
 }
 
-.section {
-	display: grid;
-	place-content: center;
-	width: auto;
-	/* margin: 0 2.5rem; */
-}
-
 /* ? PARTS */
 .part {
 	background-color: var(--purple);
@@ -95,6 +91,10 @@
 	max-width: 40rem;
 	margin: auto;
 	/* margin: 0rem 2.5rem; */
+}
+
+.part.light {
+	background-color: var(--other);
 }
 
 .part__container {

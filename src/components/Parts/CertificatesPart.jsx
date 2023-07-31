@@ -1,7 +1,7 @@
 import '../styles/Parts/CertificatesPart.css'
 import { useEffect, useState } from "react";
 
-const CertificatesPart = () => {
+const CertificatesPart = ({ darkmodeState }) => {
 
 	const certificates = [
 		{
@@ -76,7 +76,9 @@ const CertificatesPart = () => {
 	}, [shownCertificate]);
 
 	return (
-		<div id="certificates" className="part certificates"
+		<div
+			id="certificates"
+			className={`part certificates ${darkmodeState ? '' : 'light'}`}
 			onClick={() => setShownCertificate(null)}
 		>
 			<div className="part__container certificates">
@@ -86,7 +88,7 @@ const CertificatesPart = () => {
 				<div className="certificates__container">
 					{
 						certificates.map(certif => (
-							<div className={`certificate ${shownCertificate ? 'active' : ''}`} key={certif.id}>
+							<div className={`certificate ${shownCertificate ? 'active' : ''} ${darkmodeState ? '' : 'light'}`} key={certif.id}>
 								<div className="certificate__header">
 									<h2 className="certificate__title">{certif.title}</h2>
 									<i className={`show-skills__button fa-solid fa-circle-down sm ${certif.id} ${shownCertificate === certif.id && 'hide'}`} onClick={handleShowClick}></i>

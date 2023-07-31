@@ -1,6 +1,8 @@
 .app__header.section {
 	height: 20rem;
 	transition: color .3s;
+	display: grid;
+	place-content: center;
 }
 
 .app__header.section.light {

@@ -1,7 +1,7 @@
 import '../styles/Parts/AboutMePart.css'
-const AboutmePart = () => {
+const AboutmePart = ({darkmodeState}) => {
 	return (
-		<div id="aboutme" className="part">
+		<div id="aboutme" className={`part aboutme ${darkmodeState ? '' : 'light'}`}>
 			<div className="part__container aboutme">
 				<h1 className="part__title">Federico Coletto Karup</h1>
 				<p className="part__text">

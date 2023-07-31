@@ -10,6 +10,13 @@
 	gap: 1rem;
 }
 
+.heroes.section {
+	display: grid;
+	width: 100%;
+	max-width: 40rem;
+	align-self: center;
+}
+
 .hero {
 	position: relative;
 	border-radius: 1rem;
@@ -23,7 +30,7 @@
 }
 
 .hero.light {
-	background-color: var(--purple);
+	background-color: var(--other);
 	color: var(--white);
 }
 
@@ -76,7 +83,7 @@
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-25%, -50%);
+	transform: translate(-50%, -50%);
 	display: flex;
 	flex-flow: row nowrap;
 }
@@ -142,14 +149,6 @@
 
 /* + first */
 .hero.contact {
-	--black: #0a0a0c;
-	--white: #ededed;
-	--blue: #1f306e;
-	--purple: #553772;
-	--dark-pink: #8f3b76;
-	--pink: #8f3b76;
-	--salmon: #f5487f;
-	--borders: #0002;
 	height: 100%;
 }
 

@@ -11,37 +11,42 @@
 }
 
 .certificate {
-	border: 1rem solid var(--blue);
+	border: 1rem solid var(--borders);
 	border-top-left-radius: 1rem;
 	border-top-right-radius: 1rem;
 	position: relative;
 	border-bottom: none;
 }
 
+.certificate.light {
+	border: 1rem solid var(--borders);
+}
+
 .certificate.active {
-	border-bottom: 1rem solid var(--blue);
+	border-bottom: 1rem solid var(--borders);
 }
 
 .certificate__header {
-	padding-bottom: 0;
+	/* padding-bottom: 0; */
 	background-color: var(--blue);
-	padding-bottom: 1rem;
+	padding: .5rem;
+	text-align: center;
 }
 
 .certificate__title {
-	width: 90%;
+	width: 100%;
 }
 
 .show-skills__button {
 	width: 5%;
 	position: absolute;
-	right: 0;
-	top: .25rem;
+	right: .25rem;
+	top: .8rem;
 	transition: color .3s;
 	cursor: pointer;
 	text-align: center;
 	border-radius: 1rem;
-	transition: background .3s, color .3s;
+	transition: background .3s, color .3s, transform .3s;
 	color: #999;
 }
 
@@ -50,7 +55,8 @@
 	color: var(--white);
 }
 .show-skills__button.hide {
-	opacity: 0;
+	transform: rotate(180deg);
+	/* opacity: 0; */
 }
 
 .certificate__details {

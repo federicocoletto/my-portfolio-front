@@ -75,6 +75,8 @@
 
 .testimony__name {
 	height: 2.5rem;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 500;
 }
 
 .testimony__comment {

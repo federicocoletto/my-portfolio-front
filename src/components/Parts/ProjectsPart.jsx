@@ -1,6 +1,7 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import '../styles/Parts/ProjectsPart.css'
-const ProjectsPart = () => {
+const ProjectsPart = ({darkmodeState}) => {
 
 	const projects = [
 		{
@@ -75,7 +76,7 @@ const ProjectsPart = () => {
 		}
 	}
 	return (
-		<section id="projects" className="part projects">
+		<div id="projects" className={`part projects ${darkmodeState ? '' : 'light'}`}>
 			<div className="part__container projects">
 				<header className="part__header">
 					<h2 className="part__title">Mis proyectos</h2>
@@ -121,7 +122,7 @@ const ProjectsPart = () => {
 					{/* </footer> */}
 				</div>
 			</div>
-		</section>
+		</div>
 	)
 };
 

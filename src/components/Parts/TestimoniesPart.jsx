@@ -1,10 +1,11 @@
+/* eslint-disable no-unused-vars */
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import '../styles/Parts/TestimoniesPart.css'
 import { useDispatch, useSelector } from "react-redux";
 import { createTestimonyThunk, deleteTestimonyThunk, getAllTestimoniesThunk } from "../../store/slices/testimonies.slice";
 
-const TestimoniesPart = () => {
+const TestimoniesPart = ({darkmodeState}) => {
 	const { handleSubmit, register, reset } = useForm();
 	const dispatch = useDispatch()
 	const testimonies = useSelector(states => states.testimonies)
@@ -24,7 +25,7 @@ const TestimoniesPart = () => {
 	}
 
 	return (
-		<div id="testimonies" className="part testimonies">
+		<div id="testimonies" className={`part testimonies ${darkmodeState ? '' : 'light'}`}>
 			<div className="part__container testimonies">
 				<div className="part__header testimonies">
 					<h2 className='part__title testimonies'>Testomonios</h2>
@@ -47,7 +48,7 @@ const TestimoniesPart = () => {
 							<div key={index} className="testimony__card">
 								<h2 className="testimony__name">{testimony.name}</h2>
 								<p className="testimony__comment part__text">{testimony.comment}</p>
-								<button className="testimony__button delete"  onClick={() => dispatch(deleteTestimonyThunk(testimony))}><i className="fa-solid fa-trash"></i></button>
+								{/* <button className="testimony__button delete"  onClick={() => dispatch(deleteTestimonyThunk(testimony))}><i className="fa-solid fa-trash"></i></button> */}
 							</div>
 						))
 					}
