@@ -83,10 +83,10 @@ const CertificatesPart = () => {
 				<header className="part__header">
 					<h1 className="part__title">Mis certificados</h1>
 				</header>
-				<div className="part__body">
+				<div className="certificates__container">
 					{
 						certificates.map(certif => (
-							<div className={`certificates__container ${shownCertificate ? 'active' : ''}`} key={certif.id}>
+							<div className={`certificate ${shownCertificate ? 'active' : ''}`} key={certif.id}>
 								<div className="certificate__header">
 									<h2 className="certificate__title">{certif.title}</h2>
 									<i className={`show-skills__button fa-solid fa-circle-down sm ${certif.id} ${shownCertificate === certif.id && 'hide'}`} onClick={handleShowClick}></i>

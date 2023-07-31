@@ -51,39 +51,76 @@
 	flex-flow: column-reverse;
 	gap: .5rem;
 	width: 100%;
-	overflow: auto;
+	overflow-y: auto;
+	overflow-x: hidden;
 	border-radius: .5rem;
 	min-height: 15rem;
+	max-height: 25rem;
 	border: 2px solid var(--borders);
 	padding: 1rem;
+	padding-top: 1rem;
+	position: relative;
 }
 
 .testimony__card {
 	height: max-content;
 	background-color: var(--purple);
-	border-radius: .2rem;
+	border-radius: .4rem;
 	width: 100%;
-	padding: .5rem .7rem;
+	padding: .5rem 1rem;
 	display: flex;
 	flex-direction: column;
+	position: relative;
 }
 
-.testimony__card p {
-	border-top: 2px solid var(--pink);
-	padding-top: 1rem;
+.testimony__name {
+	height: 2.5rem;
+}
+
+.testimony__comment {
+	width: calc(100% - 6rem);
+}
+
+.testimony__card p::after {
+	content: '';
+	background-color: var(--pink);
+	width: calc(100% - 2rem);
+	height: 1px;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 2.3rem;
+}
+
+.testimony__button.delete {
+	position: absolute;
+	right: 1rem;
+	bottom: .75rem;
+	padding: 0;
+	height: 1.8rem;
+	width: 5rem;
+	border-radius: .3rem;
+	background-color: var(--blue);
+	color: var(--white);
+	transform: scale(1);
+	transition: transform .3s ease-out;
+}
+
+.testimony__button.delete:hover {
+	transform: scale(0.95);
 }
 
 .testimonies__cards::-webkit-scrollbar {
-	width: .4rem;
+	width: .5rem;
 	border-radius: 1rem;
 }
 
 .testimonies__cards::-webkit-scrollbar-thumb {
-	background-color: var(--main-purple);
+	background-color: var(--pink);
 	border-radius: 1rem;
 }
 
 .testimonies__cards::-webkit-scrollbar-track {
-	background-color: var(--main-black);
+	background-color: var(--blue);
 	border-radius: 1rem;
 }

@@ -44,12 +44,12 @@ body.light {
 }
 
 a {
-	color: var(--main-white);
+	color: var(--white);
 	text-decoration: inherit;
 }
 
 a:hover {
-	color: var(--main-white);
+	color: var(--pink);
 }
 
 body {

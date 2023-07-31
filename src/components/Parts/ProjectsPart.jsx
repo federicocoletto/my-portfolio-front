@@ -8,7 +8,7 @@ const ProjectsPart = () => {
 			image: '/images/eCommerce-js.png',
 			netlify: 'https://playful-frangipane-713d64.netlify.app/',
 			github: 'https://github.com/federicocoletto/eCommerce.git',
-			pname: 'eCommerce',
+			pname: 'eCommerce (JS)',
 			description: 'El primer proyecto que consistió en diseñar toda una página web. En este proyecto plasmé lo que aprendí durante el curso de Fundamentos de Desarrollo Web.',
 		},
 		{
@@ -17,7 +17,7 @@ const ProjectsPart = () => {
 			netlify: 'https://glowing-arithmetic-3a492b.netlify.app/',
 			github: 'https://github.com/federicocoletto/fortune-cookies.git',
 			pname: 'Fortune Cookes',
-			description: 'Suscipit fugit eos debitis vel corporis. Possimus debitis commodi iure reprehenderit magni repudiandae aut inventore!',
+			description: '',
 		},
 		{
 			id: 3,
@@ -25,7 +25,7 @@ const ProjectsPart = () => {
 			netlify: 'https://superlative-queijadas-800c66.netlify.app/',
 			github: 'https://github.com/federicocoletto/users-api.git',
 			pname: 'Users API',
-			description: 'https://superlative-queijadas-800c66.netlify.app/',
+			description: '',
 		},
 		{
 			id: 4,
@@ -33,7 +33,7 @@ const ProjectsPart = () => {
 			netlify: 'https://bright-bubblegum-0e3fd6.netlify.app/',
 			github: 'https://github.com/federicocoletto/rickandmorty-app.git',
 			pname: 'Rick and Morty APP',
-			description: 'Lorem*5',
+			description: '',
 		},
 		{
 			id: 5,
@@ -41,7 +41,7 @@ const ProjectsPart = () => {
 			netlify: 'https://elegant-quokka-534994.netlify.app/',
 			github: 'https://github.com/federicocoletto/weather-app.git',
 			pname: 'Weather APP',
-			description: 'https://playful-frangipane-713d64.netlify.app/',
+			description: '',
 		},
 		{
 			id: 6,
@@ -49,15 +49,15 @@ const ProjectsPart = () => {
 			netlify: 'https://jovial-frangipane-656146.netlify.app/#/pokedex',
 			github: 'https://github.com/federicocoletto/pokedex.git',
 			pname: 'Pokedex',
-			description: 'https://playful-frangipane-713d64.netlify.app/',
+			description: '',
 		},
 		{
 			id: 7,
 			image: '/images/ecommerce-react.png',
 			netlify: 'https://reliable-sunshine-0a0894.netlify.app/',
 			github: 'https://github.com/federicocoletto/eCommerce.git',
-			pname: '',
-			description: 'https://playful-frangipane-713d64.netlify.app/',
+			pname: 'eCommerce (React JS)',
+			description: '',
 		},
 	]
 
@@ -91,7 +91,7 @@ const ProjectsPart = () => {
 							projects.map(project => (
 								<div className="carousel__item" key={project.id}>
 									<div className="carousel__item-images">
-										<img className="item__image" src={project.image} alt="project-img" onMouseOver={() => setShowImg(!showImg)} />
+										<img className={`item__image ${showImg ? 'hide' : ''}`} src={project.image} alt="project-img" onMouseOver={() => setShowImg(!showImg)} />
 										<a
 											className={`carousel__image-hover ${showImg ? 'show' : ''}`}
 											onMouseOut={() => setShowImg(false)}

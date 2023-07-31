@@ -28,14 +28,14 @@
 .carousel__button {
 	transition: opacity .3s;
 	opacity: 1;
-	color: var(--blue);
+	color: #999;
 	cursor: pointer;
 	transform: scale(1.1);
 	transition: background .3s, transform .3s;
 }
 
 .carousel__button:hover {
-	color: var(--salmon);
+	color: var(--white);
 	transform: scale(1);
 }
 
@@ -78,6 +78,11 @@
 	border-radius: .1rem;
 	box-shadow: 0px 15px 30px -10px var(--black);
 	border: 1px solid var(--borders);
+	opacity: 1;
+}
+
+.item__image.hide {
+	opacity: 0;
 }
 
 .carousel__image-hover {
@@ -160,4 +165,6 @@
 .item__title {
 	margin-bottom: 1rem;
 	font-size: 1.2rem;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 400;
 }

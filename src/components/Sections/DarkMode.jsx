@@ -6,7 +6,7 @@ const DarkMode = ({ darkmodeState, setDarkmodeState }) => {
 
 	window.onscroll = function () {
 		const currentScrollPos = window.scrollY;
-		if (prevScrollpos > currentScrollPos) {
+		if (prevScrollpos < currentScrollPos) {
 			dmCont.classList.add('show')
 		} else {
 			dmCont.classList.remove('show')

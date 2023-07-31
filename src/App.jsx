@@ -20,8 +20,8 @@ function App() {
 				{/* Parts */}
 				<ProjectsPart darkmodeState={darkmodeState} />
 				<AboutmePart darkmodeState={darkmodeState} />
-				<TestimoniesPart darkmodeState={darkmodeState} />
 				<CertificatesPart darkmodeState={darkmodeState} />
+				<TestimoniesPart darkmodeState={darkmodeState} />
 			</div>
 		</div>
 	)
